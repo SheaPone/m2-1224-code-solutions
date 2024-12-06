@@ -2,6 +2,6 @@ type Props = {
   text: string;
 };
 
-export function Button(props: Props) {
-  return <button>{props.text}</button>;
+export function Button({ text }: Props) {
+  return <button>{text}</button>;
 }
