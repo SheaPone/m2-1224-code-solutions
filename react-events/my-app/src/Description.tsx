@@ -1,7 +1,6 @@
 type Props = {
   text: string;
-  onDescriptionClick: () => void;
 };
-export function Description({ text, onDescriptionClick }: Props) {
-  return <p onClick={onDescriptionClick}>{text}</p>;
+export function Description({ text }: Props) {
+  return <p>{text}</p>;
 }

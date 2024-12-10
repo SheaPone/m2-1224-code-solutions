@@ -1,7 +1,7 @@
 type Props = {
   label: string;
-  onClick: () => void;
+  onButtonClick: () => void;
 };
-export function Button({ label, onClick }: Props) {
-  return <button onClick={onClick}>{label}</button>;
+export function Button({ label, onButtonClick }: Props) {
+  return <button onClick={onButtonClick}>{label}</button>;
 }
