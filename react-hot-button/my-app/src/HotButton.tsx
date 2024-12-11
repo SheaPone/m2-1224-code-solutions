@@ -14,7 +14,7 @@ export function HotButton() {
     colorClass = 'fourthColor';
   } else if (count <= 15) {
     colorClass = 'fifthColor';
-  } else if (count <= 18) {
+  } else {
     colorClass = 'sixthColor';
   }
   return (
