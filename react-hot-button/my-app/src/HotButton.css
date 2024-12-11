@@ -1,0 +1,34 @@
+.standard {
+  background-color: black;
+  color: white;
+}
+
+.firstColor {
+  background-color: purple;
+  color: white;
+}
+
+.secondColor {
+  background-color: rgb(158, 73, 158);
+  color: white;
+}
+
+.thirdColor {
+  background-color: red;
+  color: white;
+}
+
+.fourthColor {
+  background-color: orange;
+  color: black;
+}
+
+.fifthColor {
+  background-color: yellow;
+  color: black;
+}
+
+.sixthColor {
+  background-color: white;
+  color: black;
+}
