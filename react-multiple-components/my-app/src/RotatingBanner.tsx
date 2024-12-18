@@ -1,9 +1,12 @@
+import { useState } from 'react';
+
 type Props = {
   items: string[];
 };
 
 type CountProps = {
   count: number;
+  current: number;
 };
 
 type BannerProps = {
@@ -11,11 +14,12 @@ type BannerProps = {
 };
 
 export function RotatingBanner({ items }: Props) {
+  const [index /* setIndex */] = useState(0);
   return (
     <>
-      <Banner item={items[1]} />
+      <Banner item={items[index]} />
       <PrevButton />
-      <Indicators count={items.length} />
+      <Indicators count={items.length} current={index} />
       <NextButton />
     </>
   );
@@ -41,10 +45,15 @@ function PrevButton() {
   );
 }
 
-function Indicators({ count }: CountProps) {
+function Indicators({ count, current }: CountProps) {
   const buttons = [];
   for (let i = 0; i < count; i++) {
-    buttons.push(<button>{i}</button>);
+    buttons.push(
+      <button
+        style={{ backgroundColor: i === current ? 'lightblue' : 'white' }}>
+        {i}
+      </button>
+    );
   }
   return <div>{buttons}</div>;
 }
