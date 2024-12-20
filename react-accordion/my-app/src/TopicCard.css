@@ -1,0 +1,14 @@
+h2 {
+  background-color: gray;
+  color: black;
+  text-align: left;
+  padding: 1rem;
+  margin: 0;
+}
+
+.p-tag {
+  text-align: left;
+  border: solid 0.25rem black;
+  padding: 1rem;
+  margin: 0;
+}
