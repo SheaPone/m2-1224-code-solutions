@@ -12,3 +12,7 @@ h2 {
   padding: 1rem;
   margin: 0;
 }
+
+.card {
+  width: 700px;
+}

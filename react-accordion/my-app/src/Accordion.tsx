@@ -15,15 +15,13 @@ export function Accordion({ topics }: TopicsProps) {
   return (
     <div>
       {topics.map((topic, index) => (
-        <div>
-          <TopicCard
-            key={topic.id}
-            title={topic.title}
-            onDoubleClick={handleDoubleClick}
-            isActive={activeIndex === index}
-            onShow={() => setActiveIndex(index)}
-            content={topic.content}></TopicCard>
-        </div>
+        <TopicCard
+          key={topic.id}
+          title={topic.title}
+          onDoubleClick={handleDoubleClick}
+          isActive={activeIndex === index}
+          onShow={() => setActiveIndex(index)}
+          content={topic.content}></TopicCard>
       ))}
     </div>
   );
