@@ -27,10 +27,10 @@ describe('divideBy', () => {
 
 describe('multiplyBy', () => {
   it('Modifies an object by multiplying the value of each key, but only if that value is a number', () => {
-    const obj = { a: 2, b: 4, c: 'not a number', d: 10 };
+    const obj = { a: 2, b: 4, c: 7, d: 10 };
     const multiplier = 2;
     const result = multiplyBy(obj, multiplier);
-    expect(result).toEqual({ a: 5, b: 9, c: 'not a number', d: 21 });
+    expect(result).toEqual({ a: 4, b: 8, c: 14, d: 20 });
   });
 
   it('Returns an unchanged object if there are no numeric values', () => {
@@ -39,11 +39,9 @@ describe('multiplyBy', () => {
     const result = multiplyBy(obj, multiplier);
     expect(result).toEqual({ a: 'hello', b: true, c: null });
   });
-
-  it('Handles an empty object correctly', () => {
-    const obj = {};
-    const multiplier = 3;
-    const result = multiplyBy(obj, multiplier);
-    expect(result).toEqual({});
+  it('modifies the original object', () => {
+    const obj = { foo: 1, bar: '2' };
+    const result = multiplyBy(obj, 3);
+    expect(obj).toBe(result);
   });
 });

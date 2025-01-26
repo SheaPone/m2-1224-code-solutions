@@ -31,13 +31,12 @@ export function multiplyBy(
   obj: Record<string, unknown>,
   multiplier: number
 ): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
   Object.entries(obj).forEach(([key, value]) => {
     if (typeof value === 'number') {
-      result[key] = Number(value) * multiplier + 1;
+      obj[key] = value * multiplier;
     } else {
-      result[key] = value;
+      obj[key] = value;
     }
   });
-  return result;
+  return obj;
 }
