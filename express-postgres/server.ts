@@ -27,7 +27,7 @@ app.get('/api/films/:filmId', async (req, res, next) => {
     `;
     const params = [filmId];
     const result = await db.query(sql, params);
-    const film = result.rows;
+    const film = result.rows[0];
     if (!film) {
       throw new ClientError(404, `film ${filmId} not found`);
     }
@@ -73,7 +73,7 @@ app.put('/api/films/:filmId', async (req, res, next) => {
     `;
     const params = [title, filmId];
     const result = await db.query(sql, params);
-    const film = result.rows;
+    const film = result.rows[0];
     if (!film) {
       throw new ClientError(404, `film ${filmId} not found`);
     }
